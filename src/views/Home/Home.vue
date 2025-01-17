@@ -61,7 +61,7 @@ const getRes = async () => {
   loadingStatus.value = true
   selectCardArr.value = selectCardArr.value.map((i) => ({ no: i, isReversed: Math.random() > 0.5 }))
   vh.showLoading()
-  const res = await fetch('/', { method: 'POST', body: JSON.stringify({ text: textValue.value, pms: selectCardArr.value }) })
+  const res = await fetch('/'api, { method: 'POST', body: JSON.stringify({ text: textValue.value, pms: selectCardArr.value }) })
   vh.hideLoading()
   resStatus.value = true
   const resText = await res.text()
