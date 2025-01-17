@@ -1,7 +1,7 @@
 export async function onRequestPost({ request }) {
   const { text, pms } = await request.json();
   const body = `接下来的回答请使用中文，我的问题是：${text}`
-  const res = await fetch("https://yesnotarot.org/", {
+  const res = await fetch("https://tarot-api.app1x.com/", {
     "headers": {
       ...request.headers,
       "accept": "text/x-component",
