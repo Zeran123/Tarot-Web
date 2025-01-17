@@ -16,7 +16,6 @@ export async function onRequestPost({ request }) {
       "sec-fetch-dest": "empty",
       "sec-fetch-mode": "cors",
       "sec-fetch-site": "same-origin",
-      "Referer": "https://yesnotarot.org/",
       "Referrer-Policy": "strict-origin-when-cross-origin"
     },
     "body": `["${body}",${JSON.stringify(pms)}]`,
